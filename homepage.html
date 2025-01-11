@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-    
 <head>
     <title>Sustainable Agriculture</title>
     <style>
@@ -11,47 +10,63 @@
             margin: 0;
             padding: 0;
         }
-        header {
+        .header {
             background-color: #00A36C;
             color: white;
             text-align: center;
-            padding: 1.5rem 0;
+            font-size: 20px;
+            position: fixed;
+            width: 100%;
+            height: 15%;
+
+        }
+        .header img{
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 60%;
+            margin-left: 10px;
         }
         .container {
             width: 80%;
             margin: auto;
             padding: 2rem;
+            margin-top: 0px; 
+
         }
-        section {
-            margin-bottom: 2rem;
+        .section {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            margin-bottom: 20px;
+            margin-right: 20px;
         }
-        h2 {
-            color: #93C572;
+        .section nav button {
+            background-color: #00A36C;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
         }
-        p {
-            line-height: 1.6;
-        }
-        img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
+        .section nav button:hover {
+            background-color: #AFE1AF;
         }
         .quiz-section {
             background-color: #f0f8ff;
             padding: 2rem;
             border-top: 2px solid #93C572;
+            margin-top: 20px;
         }
         .quiz-section h3 {
             color: #93C572;
-        }
-        .quiz-section form {
-            margin-top: 1rem;
         }
         .quiz-section input[type="submit"] {
             background-color: #93C572;
             color: white;
             border: none;
-            padding: 1rem 2rem;
+            padding: 10px 20px;
             cursor: pointer;
             border-radius: 5px;
         }
@@ -60,67 +75,88 @@
         }
     </style>
 </head>
-<body>
-<header>
-    <h1>Sustainable Agriculture</h1>
-    <p></p>
-</header>
-<div class="container">
-    <section>
-        <h2>What is Sustainable Agriculture?</h2>
-        <p></p>
-        <img src>
-    </section>
-    <nav>
-        <a href="What is Sustainable Agriculture.html"><button>Learn more</button></a>
-    </nav>
-    <section>
-        <h2>Why is Sustainable Agriculture Necessary?</h2>
-        <p></p>
-        <img src>
 
-    </section>
-    <nav>
-        <a href="Why is Sustainable Agriculture Necessary.html"><button>Learn more</button></a>
-    </nav>
-    <section>
-        <h2>Implementation</h2>
-        <p></p>
-        <ul>
-            <li></li>
-        </ul>
-        <img src>
-    </section>
-    <nav>
-        <a href="Sustainable Practices.html"><button>Learn more</button></a>
-    </nav>
-    <section>
-        <h2>Risks</h2>
-        <p></p>
-        <ul>
-            <li></li>
-        </ul>
-        <img src>
-    </section>
-    <nav>
-        <a href="Risks.html"><button>Learn more</button></a>
-    </nav>
+<body>
+<div class="header">
+    <a href="homepage.html">
+        <img src="Person.jpg" style="position: absolute; top: 50px;">
+    </a>
+    <h1>Sustainable Agriculture</h1>
+</div>
+<br>
+<br>
+<br>
+<div class="container">
+    <div class="section">
+        <img src="what is sustainable agriculture.png" alt="What is Sustainable Agriculture" style="margin-right: 50px;">
+        <div class="text">
+            <h2>What is Sustainable Agriculture?</h2>
+            <p>tftyugk</p>
+            <br>
+            <nav>
+                <a href="What is Sustainable Agriculture.html">
+                    <button>Learn more</button>
+                </a>
+            </nav>
+        </div>
+    </div>
+    <div class="section">
+        <img src="why is sustainable agriculture necessary.png" alt="Why is Sustainable Agriculture Necessary" style="margin-right: 50px;">
+        <div class="text">
+            <h2>Why is Sustainable Agriculture Necessary?</h2>
+            <p>tftyugk</p>
+            <nav>
+                <a href="Why is Sustainable Agriculture Necessary.html">
+                    <button>Learn more</button>
+                </a>
+            </nav>
+        </div>
+    </div>
+    <div class="section">
+        <img src="sustainable practices.png" alt="Implementation" style="margin-right: 50px;">
+        <div class="text">
+            <h2>Implementation</h2>
+            <p>tftyugk</p>
+            <nav>
+                <a href="Sustainable Practices.html">
+                    <button>Learn more</button>
+                </a>
+            </nav>
+        </div>
+    </div>
+    <div class="section">
+        <img src="risks.png" alt="Risks" style="margin-right: 50px;">
+        <div class="text">
+            <h2>Risks</h2>
+            <p>tftyugk</p>
+            <nav>
+                <a href="Risks.html">
+                    <button>Learn more</button>
+                </a>
+            </nav>
+        </div>
+    </div>
+
     <div class="quiz-section">
         <h3>Quiz</h3>
         <form id="quizForm">
-            <label for="q1">1. </label><br>
-            <input type="radio" id="q1a" name="q1" value="soilHealth"> <br>
-            <input type="radio" id="q1b" name="q1" value="pesticides"> <br><br>
-            <label for="q2">2. </label><br>
-            <input type="radio" id="q2a" name="q2" value="cropRotation"> <br>
-            <input type="radio" id="q2b" name="q2" value="monoculture"> <br><br>
-            <label for="q3">3. </label><br>
-            <input type="radio" id="q3a" name="q3" value="soilErosion"> <br>
-            <input type="radio" id="q3b" name="q3" value="betterYields"> <br><br>
+            <label for="q1">1. Question 1:</label><br>
+            <input type="radio" id="q1a" name="q1" value="a"> Option A<br>
+            <input type="radio" id="q1b" name="q1" value="b"> Option B<br><br>
+
+            <label for="q2">2. Question 2:</label><br>
+            <input type="radio" id="q2a" name="q2" value="a"> Option A<br>
+            <input type="radio" id="q2b" name="q2" value="b"> Option B<br><br>
+
+            <label for="q3">3. Question 3:</label><br>
+            <input type="radio" id="q3a" name="q3" value="a"> Option A<br>
+            <input type="radio" id="q3b" name="q3" value="b"> Option B<br><br>
+
             <input type="submit" value="Submit">
         </form>
     </div>
 </div>
+
 <script>
     document.getElementById("quizForm").addEventListener("submit", function(event) {
         event.preventDefault();
