@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+    
+<head>
+    <title>Sustainable Agriculture</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 2rem;
+        }
+        section {
+            margin-bottom: 2rem;
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        p {
+            line-height: 1.6;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .quiz-section {
+            background-color: #f0f8ff;
+            padding: 2rem;
+            border-top: 2px solid #4CAF50;
+        }
+        .quiz-section h3 {
+            color: #4CAF50;
+        }
+        .quiz-section form {
+            margin-top: 1rem;
+        }
+        .quiz-section input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .quiz-section input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Sustainable Agriculture</h1>
+    <p></p>
+</header>
+<div class="container">
+    <section>
+        <h2>What is Sustainable Agriculture?</h2>
+        <p></p>
+        <img src>
+    </section>
+    <nav>
+        <a href="What is Sustainable Agriculture?.html"><button>learn more</button></a>
+    </nav>
+    <section>
+        <h2>Why is Sustainable Agriculture Necessary?</h2>
+        <p></p>
+        <img src>
+
+    </section>
+    <nav>
+        <a href="Why is Sustainable Agriculture Necessary.html"><button>learn more</button></a>
+    </nav>
+    <section>
+        <h2>Imlpementation</h2>
+        <p></p>
+        <ul>
+            <li></li>
+        </ul>
+        <img src="" alt="Sustainable Practices">
+    </section>
+    <nav>
+        <a href="Sustainable Practices.html"><button>learn more</button></a>
+    </nav>
+    <section>
+        <h2>Risks</h2>
+        <p></p>
+        <ul>
+            <li></li>
+        </ul>
+        <img src="" alt="Risks of Unsustainable Agriculture">
+    </section>
+    <nav>
+        <a href="Risks.html"><button>learn more</button></a>
+    </nav>
+    <div class="quiz-section">
+        <h3>Test Your Knowledge on Sustainable Agriculture</h3>
+        <form id="quizForm">
+            <label for="q1">1. What is a key benefit of sustainable agriculture?</label><br>
+            <input type="radio" id="q1a" name="q1" value="soilHealth"> Improving soil health<br>
+            <input type="radio" id="q1b" name="q1" value="pesticides"> Increased pesticide use<br><br>
+            <label for="q2">2. What is one method of implementing sustainable farming?</label><br>
+            <input type="radio" id="q2a" name="q2" value="cropRotation"> Crop rotation<br>
+            <input type="radio" id="q2b" name="q2" value="monoculture"> Monoculture farming<br><br>
+            <label for="q3">3. What is a risk of not practicing sustainable agriculture?</label><br>
+            <input type="radio" id="q3a" name="q3" value="soilErosion"> Soil erosion<br>
+            <input type="radio" id="q3b" name="q3" value="betterYields"> Better yields<br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</div>
+<script>
+    document.getElementById("quizForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        alert("Thank you for taking the quiz! Please check your answers.");
+    });
+</script>
+</body>
+</html>
