@@ -116,13 +116,19 @@
                     updateQuestion(); 
                 } else {
                     document.getElementById("question").innerText = "Congratulations! You've completed the quiz!";
+                    const img = document.createElement("img"); 
+                    img.src = "https://t3.ftcdn.net/jpg/02/91/52/22/360_F_291522205_XkrmS421FjSGTMRdTrqFZPxDY19VxpmL.jpg"; 
+                    img.alt = "Congratulations Image"; 
+                    img.style.width = "500px"; 
+                    img.className = "middle-image";
+                    img.style.position = "500x500";
+                    document.querySelector(".quiz-container").appendChild(img);
                 }
             } else {
                 alert("Incorrect. Try again!");
             }
         }
 
-        // Function to update the quiz question
         function updateQuestion() {
             const questionElement = document.getElementById("question");
             switch (currentPosition) {
