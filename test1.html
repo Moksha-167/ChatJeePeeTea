@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Quiz Adventure</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .map-container {
+            position: relative;
+            width: 800px;
+            height: 500px;
+            margin: 20px auto;
+            border: 3px solid #333;
+            background-image: url('https://cdn.pixabay.com/photo/2020/08/31/16/42/fantasy-map-6355970_960_720.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .sprite {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border-radius: 50%;
+            transition: all 0.5s ease-in-out;
+        }
+
+        /* Position markers */
+        .path-line {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background-color: yellow;
+            border-radius: 50%;
+        }
+
+        #pointA { top: 20%; left: 10%; }
+        #pointB { top: 40%; left: 30%; }
+        #pointC { top: 60%; left: 50%; }
+        #pointD { top: 80%; left: 70%; }
+
+        /* Default sprite location */
+        .sprite {
+            top: 20%;
+            left: 10%;
+        }
+
+        /* CSS for sprite movement using radio buttons */
+        #step1:checked ~ .map-container .sprite { top: 40%; left: 30%; }
+        #step2:checked ~ .map-container .sprite { top: 60%; left: 50%; }
+        #step3:checked ~ .map-container .sprite { top: 80%; left: 70%; }
+
+        .quiz-container {
+            margin-top: 20px;
+        }
+
+        .question {
+            font-size: 1.2rem;
+            margin: 15px 0;
+        }
+
+        .answers {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Hide radio buttons */
+        input[type="radio"] {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Interactive Map Quiz</h1>
+    
+    <!-- Step radio buttons for movement -->
+    <input type="radio" name="step" id="step1">
+    <input type="radio" name="step" id="step2">
+    <input type="radio" name="step" id="step3">
+
+    <div class="map-container">
+        <div class="sprite"></div>
+        <div class="path-line" id="pointA"></div>
+        <div class="path-line" id="pointB"></div>
+        <div class="path-line" id="pointC"></div>
+        <div class="path-line" id="pointD"></div>
+    </div>
+
+    <div class="quiz-container">
+        <div class="question" id="question1">
+            <label for="step1">What is sustainable agriculture?</label>
+        </div>
+        <div class="answers">
+            <button>A method of farming that preserves the environment</button>
+            <button>Farming that only focuses on high yields</button>
+            <button>Using harmful pesticides for crops</button>
+        </div>
+
+        <div class="question" id="question2" style="display: none;">
+            <label for="step2">What is crop rotation?</label>
+        </div>
+        <div class="answers">
+            <button>Rotating crops to improve soil health</button>
+            <button>Planting the same crop every year</button>
+            <button>Using only organic fertilizers</button>
+        </div>
+
+        <div class="question" id="question3" style="display: none;">
+            <label for="step3">What does sustainable farming reduce?</label>
+        </div>
+        <div class="answers">
+            <button>Soil erosion</button>
+            <button>Farm efficiency</button>
+            <button>Biodiversity</button>
+        </div>
+    </div>
+</body>
+</html>
