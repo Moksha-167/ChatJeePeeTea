@@ -10,23 +10,37 @@
             margin: 0;
             padding: 0;
         }
-        .header {
+       .header {
             background-color: #00A36C;
             color: white;
             text-align: center;
-            font-size: 50px;
+            font-size: 20px;
             position: fixed;
             width: 100%;
             height: 15%;
+
+        }
+        .header img{
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 80%;
+            margin-left: 10px;
         }
         .container {
             width: 80%;
             margin: auto;
             padding: 2rem;
             margin-top: 0px; 
+
         }
-        section {
-            margin-bottom: 2rem;
+        .section {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            margin-bottom: 20px;
+            margin-right: 20px;
         }
         .text-container {
             font-size: 20px;
@@ -37,14 +51,26 @@
         </style>
 </head>
 <body>
-<div class="header">
-    Sustainable Agriculture
-</div>
+    <div class="header">
+        <a href="homepage.html">
+            <img src="Logo.png" style="position: absolute; top: 50px;">
+        </a>
+        <h1>Sustainable Agriculture</h1>
+    </div>
 <br>
 <div class="text-container">
     <br>
     <h1>Why is Sustainable Agricultural Neccesary? </h1>
-    <p>Sustainable farming is super important for a bunch of reasons:</p>
+    <p>Sustainable farming is crucial for a multiple of reasons such as saving water, reducing pollution from chemical 
+        fertilizers and pesticides, and preventing soil from eroding. This method of farming helps the farmers conserve 
+        resources therefore they can save their money on supplies. Additionally, it makes sure that these resources are 
+        available for all future generations. Farming practices such as composting, crop-rotation and cover cropping 
+        helps in trapping carbon emissions in the soil, removing carbon dioxide from the atmosphere. Optimizing the use of
+         resources also ensures that agriculture can meet the rising demand for food due to the growing population. It may
+          even lead to higher crop yields because the sustainable methods will not degrade the lands as compared to 
+          conventional methods.
+          <br>
+        Sustainable farming is important because:</p>
     <li>Environmental Protection: It helps stop soil from washing away, saves water, and reduces pollution from chemical 
         fertilizers and pesticides.</li>
     <li>Economic Viability: Using sustainable methods keeps farming profitable for a long time and helps farmers not rely 
@@ -53,4 +79,162 @@
     <li>Climate Change Mitigation: Sustainable methods trap carbon in the soil and lessen greenhouse gas emissions.</li>
 </div>
 </body>
+
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ECFFDC;
+            text-align: center;
+        }
+    
+        .map-container {
+            position: relative;
+            width: 800px;
+            height: 500px;
+            margin: 20px auto;
+            border: 3px solid #333;
+            background-image: url('https://cdn.discordapp.com/attachments/1136632911232241746/1327680184383701023/map.jpg?ex=6783f207&is=6782a087&hm=2e45b51713ed68ec58939f7ad0111f0318b3a8558d1fdc77d13529ee2954004d&'); /* Correct Fantasy Map Image */
+            background-size: cover;
+            background-position: center;
+        }
+    
+        .sprite {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #00A36C;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transition: top 1s, left 1s;
+        }
+    
+        .quiz-container {
+            margin-top: 20px;
+        }
+    
+        .question {
+            font-size: 1.2rem;
+            margin: 15px 0;
+        }
+    
+        .answers {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+    
+        button {
+            padding: 10px 20px;
+            background-color: #93C572;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    
+        button:hover {
+            background-color: #AFE1AF;
+        }
+    
+        .path-line {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background-color: yellow;
+            border-radius: 50%;
+            z-index: 2;
+        }
+    
+        .completed {
+            background-color: green;
+        }
+    </style>
+    </head>
+    <body>
+    <h1>Interactive Map Quiz</h1>
+    <div class="map-container">
+        <div class="sprite" id="sprite"></div>
+        <div class="path-line" id="pointA" style="top: 20%; left: 10%;"></div>
+        <div class="path-line" id="pointB" style="top: 40%; left: 30%;"></div>
+        <div class="path-line" id="pointC" style="top: 60%; left: 50%;"></div>
+        <div class="path-line" id="pointD" style="top: 80%; left: 70%;"></div>
+    </div>
+    
+    <div class="quiz-container">
+        <div class="question" id="question">What is sustainable agriculture?</div>
+        <div class="answers">
+            <button onclick="checkAnswer('correct')">A method of farming that preserves the environment</button>
+            <button onclick="checkAnswer('wrong')">Farming that only focuses on high yields</button>
+            <button onclick="checkAnswer('wrong')">Using harmful pesticides for crops</button>
+        </div>
+    </div>
+    
+    <script>
+        let currentPosition = 0; 
+        const points = [
+            { x: 10, y: 10 }, 
+            { x: 40, y: 35 }, 
+            { x: 65, y: 58 }, 
+            { x: 45, y: 85 }  
+        ];
+        const sprite = document.getElementById("sprite");
+    
+        function moveSprite(pointIndex) {
+            const point = points[pointIndex];
+            sprite.style.left = point.x + '%';
+            sprite.style.top = point.y + '%';
+        }
+    
+        function checkAnswer(answer) {
+            if (answer === 'correct') {
+                alert("Correct! Moving to the next destination.");
+                currentPosition++;
+                if (currentPosition < points.length) {
+                    moveSprite(currentPosition);
+                    updateQuestion(); 
+                } else {
+                    document.getElementById("question").innerText = "Congratulations! You've completed the quiz!";
+                    const img = document.createElement("img"); 
+                    img.src = "https://t3.ftcdn.net/jpg/02/91/52/22/360_F_291522205_XkrmS421FjSGTMRdTrqFZPxDY19VxpmL.jpg"; 
+                    img.alt = "Congratulations Image"; 
+                    img.style.width = "500px"; 
+                    img.className = "middle-image";
+                    img.style.position = "500x500";
+                    document.querySelector(".quiz-container").appendChild(img);
+                }
+            } else {
+                alert("Incorrect. Try again!");
+            }
+        }
+    
+        function updateQuestion() {
+            const questionElement = document.getElementById("question");
+            switch (currentPosition) {
+                case 1:
+                    questionElement.innerText = "What is crop rotation?";
+                    document.querySelectorAll(".answers button")[0].innerText = "Rotating crops to improve soil health";
+                    document.querySelectorAll(".answers button")[1].innerText = "Planting the same crop every year";
+                    document.querySelectorAll(".answers button")[2].innerText = "Using only organic fertilizers";
+                    break;
+                case 2:
+                    questionElement.innerText = "What is an example of sustainable farming?";
+                    document.querySelectorAll(".answers button")[0].innerText = "Using cover crops";
+                    document.querySelectorAll(".answers button")[1].innerText = "Using synthetic chemicals";
+                    document.querySelectorAll(".answers button")[2].innerText = "Monoculture farming";
+                    break;
+                case 3:
+                    questionElement.innerText = "What does sustainable farming reduce?";
+                    document.querySelectorAll(".answers button")[0].innerText = "Soil erosion";
+                    document.querySelectorAll(".answers button")[1].innerText = "Farm efficiency";
+                    document.querySelectorAll(".answers button")[2].innerText = "Biodiversity";
+                    break;
+                default:
+                    break;
+            }
+        }
+    
+        moveSprite(currentPosition);
+    </script>
+    </body>
 </html>
