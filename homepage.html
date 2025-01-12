@@ -25,7 +25,7 @@
             left: 0;
             top: 50%;
             transform: translateY(-50%);
-            height: 60%;
+            height: 80%;
             margin-left: 10px;
         }
         .container {
@@ -53,33 +53,13 @@
         .section nav button:hover {
             background-color: #AFE1AF;
         }
-        .quiz-section {
-            background-color: #f0f8ff;
-            padding: 2rem;
-            border-top: 2px solid #93C572;
-            margin-top: 20px;
-        }
-        .quiz-section h3 {
-            color: #93C572;
-        }
-        .quiz-section input[type="submit"] {
-            background-color: #93C572;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        .quiz-section input[type="submit"]:hover {
-            background-color: #AFE1AF;
-        }
     </style>
 </head>
 
 <body>
 <div class="header">
     <a href="homepage.html">
-        <img src="Person.jpg" style="position: absolute; top: 50px;">
+        <img src="Logo.png" style="position: absolute; top: 50px;">
     </a>
     <h1>Sustainable Agriculture</h1>
 </div>
@@ -91,7 +71,10 @@
         <img src="what is sustainable agriculture.png" alt="What is Sustainable Agriculture" style="margin-right: 50px;">
         <div class="text">
             <h2>What is Sustainable Agriculture?</h2>
-            <p>tftyugk</p>
+            <p>Sustainable agriculture is about farming methods that fulfill today’s food demands without harming future 
+                generations' chances to get what they need. It emphasizes keeping the soil healthy, using water wisely,
+                cutting down on chemicals, and encouraging different kinds of plants and animals.
+            </p>
             <br>
             <nav>
                 <a href="What is Sustainable Agriculture.html">
@@ -104,7 +87,9 @@
         <img src="why is sustainable agriculture necessary.png" alt="Why is Sustainable Agriculture Necessary" style="margin-right: 50px;">
         <div class="text">
             <h2>Why is Sustainable Agriculture Necessary?</h2>
-            <p>tftyugk</p>
+            <p>Sustainable farming conserves resources, reduces pollution, prevents soil erosion, and ensures future 
+                availability of resources. Practices like composting and crop rotation enhance soil health, meet rising
+                food demand, and can potentially increase crop yields.</p>
             <nav>
                 <a href="Why is Sustainable Agriculture Necessary.html">
                     <button>Learn more</button>
@@ -113,10 +98,12 @@
         </div>
     </div>
     <div class="section">
-        <img src="sustainable practices.png" alt="Implementation" style="margin-right: 50px;">
+        <img src="sustainable praactices.png" alt="Implementation" style="margin-right: 50px;">
         <div class="text">
             <h2>Implementation</h2>
-            <p>tftyugk</p>
+            <p>Growers enhance soil health, minimize water use, and reduce pollution. Food processors cut waste, promote 
+                sustainability, and use organics. Distributors focus on eco-friendly practices, while retailers and 
+                consumers prioritize values-based supply chains.</p>
             <nav>
                 <a href="Sustainable Practices.html">
                     <button>Learn more</button>
@@ -127,8 +114,10 @@
     <div class="section">
         <img src="risks.png" alt="Risks" style="margin-right: 50px;">
         <div class="text">
-            <h2>Risks</h2>
-            <p>tftyugk</p>
+            <h2>What happens if we don't farm Sustainabily?</h2>
+            <p>Soil degradation, water scarcity, biodiversity loss, food insecurity, and increased climate impacts result
+                from unsustainable farming practices, harming ecosystems, reducing crop quality, and threatening human 
+                health through contamination.</p>
             <nav>
                 <a href="Risks.html">
                     <button>Learn more</button>
@@ -136,32 +125,5 @@
             </nav>
         </div>
     </div>
-
-    <div class="quiz-section">
-        <h3>Quiz</h3>
-        <form id="quizForm">
-            <label for="q1">1. Question 1:</label><br>
-            <input type="radio" id="q1a" name="q1" value="a"> Option A<br>
-            <input type="radio" id="q1b" name="q1" value="b"> Option B<br><br>
-
-            <label for="q2">2. Question 2:</label><br>
-            <input type="radio" id="q2a" name="q2" value="a"> Option A<br>
-            <input type="radio" id="q2b" name="q2" value="b"> Option B<br><br>
-
-            <label for="q3">3. Question 3:</label><br>
-            <input type="radio" id="q3a" name="q3" value="a"> Option A<br>
-            <input type="radio" id="q3b" name="q3" value="b"> Option B<br><br>
-
-            <input type="submit" value="Submit">
-        </form>
-    </div>
-</div>
-
-<script>
-    document.getElementById("quizForm").addEventListener("submit", function(event) {
-        event.preventDefault();
-        alert("Thank you for taking the quiz! Please check your answers.");
-    });
-</script>
 </body>
 </html>
