@@ -2,6 +2,7 @@
 <html>  
 <head>
     <title>Sustainable Practices</title>
+    <link rel="icon" href="Logo.png" type="image/png">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -181,11 +182,11 @@
     </div>
     
     <div class="quiz-container">
-        <div class="question" id="question">What is sustainable agriculture?</div>
+        <div class="question" id="question">What is crop rotation primarily used for?</div>
         <div class="answers">
-            <button onclick="checkAnswer('correct')">A method of farming that preserves the environment</button>
-            <button onclick="checkAnswer('wrong')">Farming that only focuses on high yields</button>
-            <button onclick="checkAnswer('wrong')">Using harmful pesticides for crops</button>
+            <button onclick="checkAnswer('wrong')">Increasing water usage</button>
+            <button onclick="checkAnswer('correct')">Improving soil health and keeping pests away</button>
+            <button onclick="checkAnswer('wrong')">Reducing the need for transportation</button>
         </div>
     </div>
     
@@ -231,22 +232,22 @@
             const questionElement = document.getElementById("question");
             switch (currentPosition) {
                 case 1:
-                    questionElement.innerText = "What is crop rotation?";
-                    document.querySelectorAll(".answers button")[0].innerText = "Rotating crops to improve soil health";
-                    document.querySelectorAll(".answers button")[1].innerText = "Planting the same crop every year";
-                    document.querySelectorAll(".answers button")[2].innerText = "Using only organic fertilizers";
+                    questionElement.innerText = "What is the main purpose of agroforestry?";
+                    document.querySelectorAll(".answers button")[1].innerText = "Reducing food waste";
+                    document.querySelectorAll(".answers button")[0].innerText = "Boosting biodiversity by planting trees with crops";
+                    document.querySelectorAll(".answers button")[2].innerText = "Minimizing the use of fertilizers";
                     break;
                 case 2:
-                    questionElement.innerText = "What is an example of sustainable farming?";
-                    document.querySelectorAll(".answers button")[0].innerText = "Using cover crops";
-                    document.querySelectorAll(".answers button")[1].innerText = "Using synthetic chemicals";
-                    document.querySelectorAll(".answers button")[2].innerText = "Monoculture farming";
+                    questionElement.innerText = "How does organic farming benefit the environment? ";
+                    document.querySelectorAll(".answers button")[1].innerText = "By using renewable energy sources";
+                    document.querySelectorAll(".answers button")[2].innerText = "By planting trees around farmland";
+                    document.querySelectorAll(".answers button")[0].innerText = "By using natural fertilizers and pest control";
                     break;
                 case 3:
-                    questionElement.innerText = "What does sustainable farming reduce?";
-                    document.querySelectorAll(".answers button")[0].innerText = "Soil erosion";
-                    document.querySelectorAll(".answers button")[1].innerText = "Farm efficiency";
-                    document.querySelectorAll(".answers button")[2].innerText = "Biodiversity";
+                    questionElement.innerText = "What is the purpose of cover cropping?";
+                    document.querySelectorAll(".answers button")[0].innerText = "Preventing soil erosion";
+                    document.querySelectorAll(".answers button")[1].innerText = "Ensuring sustainable transport of crops";
+                    document.querySelectorAll(".answers button")[2].innerText = "Reducing food waste";
                     break;
                 default:
                     break;
