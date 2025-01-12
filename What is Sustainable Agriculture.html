@@ -2,6 +2,7 @@
 <html>  
 <head>
     <title>What is Sustainable Agriculture</title>
+    <link rel="icon" href="Logo.png" type="image/png">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -91,17 +92,6 @@
         background-position: center;
     }
 
-    .sprite {
-        position: absolute;
-        width: 50px;
-        height: 50px;
-        background-color: #00A36C;
-        border-radius: 50%;
-        top: 50%;
-        left: 50%;
-        transition: top 1s, left 1s;
-    }
-
     .quiz-container {
         margin-top: 20px;
     }
@@ -146,6 +136,13 @@
 <body>
 <h1>Interactive Map Quiz</h1>
 <div class="map-container">
+    <img id="sprite" src="rabbit.png" alt="Sprite" style="
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        top: 100%;
+        left: 100%;
+        transition: top 1s, left 1s;">
     <div class="sprite" id="sprite"></div>
     <div class="path-line" id="pointA" style="top: 20%; left: 10%;"></div>
     <div class="path-line" id="pointB" style="top: 40%; left: 30%;"></div>
@@ -154,11 +151,11 @@
 </div>
 
 <div class="quiz-container">
-    <div class="question" id="question">What is sustainable agriculture?</div>
+    <div class="question" id="question">What is the main goal of sustainable agriculture?</div>
     <div class="answers">
-        <button onclick="checkAnswer('correct')">A method of farming that preserves the environment</button>
-        <button onclick="checkAnswer('wrong')">Farming that only focuses on high yields</button>
-        <button onclick="checkAnswer('wrong')">Using harmful pesticides for crops</button>
+        <button onclick="checkAnswer('wrong')">To produce food quickly and cheaply</button>
+        <button onclick="checkAnswer('correct')">To fulfill today’s food demands while protecting future generations’ needs</button>
+        <button onclick="checkAnswer('wrong')">To use only organic farming method</button>
     </div>
 </div>
 
@@ -168,7 +165,7 @@
         { x: 10, y: 10 }, 
         { x: 40, y: 35 }, 
         { x: 65, y: 58 }, 
-        { x: 45, y: 85 }  
+        { x: 45, y: 80 }  
     ];
     const sprite = document.getElementById("sprite");
 
@@ -204,22 +201,22 @@
         const questionElement = document.getElementById("question");
         switch (currentPosition) {
             case 1:
-                questionElement.innerText = "What is crop rotation?";
-                document.querySelectorAll(".answers button")[0].innerText = "Rotating crops to improve soil health";
-                document.querySelectorAll(".answers button")[1].innerText = "Planting the same crop every year";
-                document.querySelectorAll(".answers button")[2].innerText = "Using only organic fertilizers";
+                questionElement.innerText = "Besides farmers, who else plays a role in ensuring sustainable agriculture?";
+                document.querySelectorAll(".answers button")[0].innerText = "Only government officials";
+                document.querySelectorAll(".answers button")[1].innerText = "Consumers, food processors, distributors, retailers, and waste managers";
+                document.querySelectorAll(".answers button")[2].innerText = "Only scientists and researchers";
                 break;
             case 2:
-                questionElement.innerText = "What is an example of sustainable farming?";
-                document.querySelectorAll(".answers button")[0].innerText = "Using cover crops";
-                document.querySelectorAll(".answers button")[1].innerText = "Using synthetic chemicals";
-                document.querySelectorAll(".answers button")[2].innerText = "Monoculture farming";
+                questionElement.innerText = "What challenges might arise when people in the agricultural industry have to negotiate and compete?";
+                document.querySelectorAll(".answers button")[0].innerText = "They may agree too quickly on solutions";
+                document.querySelectorAll(".answers button")[1].innerText = "They might face conflicts over resources and profit-sharing";
+                document.querySelectorAll(".answers button")[2].innerText = "There will be no impact on sustainability goals";
                 break;
             case 3:
-                questionElement.innerText = "What does sustainable farming reduce?";
-                document.querySelectorAll(".answers button")[0].innerText = "Soil erosion";
-                document.querySelectorAll(".answers button")[1].innerText = "Farm efficiency";
-                document.querySelectorAll(".answers button")[2].innerText = "Biodiversity";
+                questionElement.innerText = "Agriculture is best defined as-";
+                document.querySelectorAll(".answers button")[0].innerText = "using technology to increase production";
+                document.querySelectorAll(".answers button")[1].innerText = "the cultivation of plants/domesticating animals";
+                document.querySelectorAll(".answers button")[2].innerText = "the altering genetic materials of plants";
                 break;
             default:
                 break;
