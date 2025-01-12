@@ -2,6 +2,7 @@
 <html>  
 <head>
     <title>The need of Sustainable Agriculture</title>
+    <link rel="icon" href="Logo.png" type="image/png">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -94,7 +95,7 @@
             height: 500px;
             margin: 20px auto;
             border: 3px solid #333;
-            background-image: url('https://cdn.discordapp.com/attachments/1136632911232241746/1327680184383701023/map.jpg?ex=6783f207&is=6782a087&hm=2e45b51713ed68ec58939f7ad0111f0318b3a8558d1fdc77d13529ee2954004d&'); /* Correct Fantasy Map Image */
+            background-image: url('https://cdn.discordapp.com/attachments/1119958130361643030/1327822368982306816/image.png?ex=67847672&is=678324f2&hm=90ee208b31c4f3406be8e4c3347dabc0e9a3a685359dc38e0e10216969948fdb&'); 
             background-size: cover;
             background-position: center;
         }
@@ -103,13 +104,14 @@
             position: absolute;
             width: 50px;
             height: 50px;
-            background-color: #00A36C;
             border-radius: 50%;
             top: 50%;
             left: 50%;
             transition: top 1s, left 1s;
+            background-image: url('monkey.png'); 
+            background-position: 0 0; 
+            background-size: auto; 
         }
-    
         .quiz-container {
             margin-top: 20px;
         }
@@ -162,11 +164,11 @@
     </div>
     
     <div class="quiz-container">
-        <div class="question" id="question">What is sustainable agriculture?</div>
+        <div class="question" id="question">How does sustainable farming help in fighting climate change?</div>
         <div class="answers">
-            <button onclick="checkAnswer('correct')">A method of farming that preserves the environment</button>
-            <button onclick="checkAnswer('wrong')">Farming that only focuses on high yields</button>
-            <button onclick="checkAnswer('wrong')">Using harmful pesticides for crops</button>
+            <button onclick="checkAnswer('correct')">By trapping carbon in the soil and reducing greenhouse gas emissions</button>
+            <button onclick="checkAnswer('wrong')">By cutting down forests to increase farmland</button>
+            <button onclick="checkAnswer('wrong')">By increasing the use of fossil fuels in farming</button>
         </div>
     </div>
     
@@ -212,22 +214,22 @@
             const questionElement = document.getElementById("question");
             switch (currentPosition) {
                 case 1:
-                    questionElement.innerText = "What is crop rotation?";
-                    document.querySelectorAll(".answers button")[0].innerText = "Rotating crops to improve soil health";
-                    document.querySelectorAll(".answers button")[1].innerText = "Planting the same crop every year";
-                    document.querySelectorAll(".answers button")[2].innerText = "Using only organic fertilizers";
+                    questionElement.innerText = "How does sustainable farming help farmers economically?";
+                    document.querySelectorAll(".answers button")[0].innerText = "By keeping farming profitable and reducing costs";
+                    document.querySelectorAll(".answers button")[1].innerText = "By making them rely on expensive supplies";
+                    document.querySelectorAll(".answers button")[2].innerText = "By forcing them to use conventional methods";
                     break;
                 case 2:
-                    questionElement.innerText = "What is an example of sustainable farming?";
-                    document.querySelectorAll(".answers button")[0].innerText = "Using cover crops";
-                    document.querySelectorAll(".answers button")[1].innerText = "Using synthetic chemicals";
-                    document.querySelectorAll(".answers button")[2].innerText = "Monoculture farming";
+                    questionElement.innerText = "What role does sustainable farming play in food security?";
+                    document.querySelectorAll(".answers button")[0].innerText = "It ensures enough food for a growing population";
+                    document.querySelectorAll(".answers button")[1].innerText = "It limits the amount of food grown";
+                    document.querySelectorAll(".answers button")[2].innerText = "It focuses only on exporting food";
                     break;
                 case 3:
-                    questionElement.innerText = "What does sustainable farming reduce?";
-                    document.querySelectorAll(".answers button")[0].innerText = "Soil erosion";
-                    document.querySelectorAll(".answers button")[1].innerText = "Farm efficiency";
-                    document.querySelectorAll(".answers button")[2].innerText = "Biodiversity";
+                    questionElement.innerText = "Which farming practices are mentioned as helpful in trapping carbon emissions?";
+                    document.querySelectorAll(".answers button")[0].innerText = "Composting, crop rotation, and cover cropping";
+                    document.querySelectorAll(".answers button")[1].innerText = "Deforestation and tillage";
+                    document.querySelectorAll(".answers button")[2].innerText = "Over-irrigation and soil degradation";
                     break;
                 default:
                     break;
