@@ -206,21 +206,21 @@
         switch (currentPosition) {
             case 1:
                 questionElement.innerText = "Besides farmers, who else plays a role in ensuring sustainable agriculture?";
-                document.querySelectorAll(".answers button")[1].innerText = "Only government officials";
+                document.querySelectorAll(".answers button")[0].innerText = "Only government officials";
+                document.querySelectorAll(".answers button")[1].innerText = "Consumers, food processors, distributors, retailers, and waste managers";
                 document.querySelectorAll(".answers button")[2].innerText = "Only scientists and researchers";
-                document.querySelectorAll(".answers button")[0].innerText = "Consumers, food processors, distributors, retailers, and waste managers";
                 break;
             case 2:
                 questionElement.innerText = "What challenges might arise when people in the agricultural industry have to negotiate and compete?";
-                document.querySelectorAll(".answers button")[0].innerText = "They might face conflicts over resources and profit-sharing";
-                document.querySelectorAll(".answers button")[1].innerText = "They may agree too quickly on solutions";
+                document.querySelectorAll(".answers button")[0].innerText = "They may agree too quickly on solutions";
+                document.querySelectorAll(".answers button")[1].innerText = "They might face conflicts over resources and profit-sharing";
                 document.querySelectorAll(".answers button")[2].innerText = "There will be no impact on sustainability goals";
                 break;
             case 3:
                 questionElement.innerText = "Agriculture is best defined as-";
-                document.querySelectorAll(".answers button")[1].innerText = "using technology to increase production";
-                document.querySelectorAll(".answers button")[2].innerText = " the altering genetic materials of plants";
-                document.querySelectorAll(".answers button")[0].innerText = "the cultivation of plants/domesticating animals";
+                document.querySelectorAll(".answers button")[0].innerText = "using technology to increase production";
+                document.querySelectorAll(".answers button")[1].innerText = "the cultivation of plants/domesticating animals";
+                document.querySelectorAll(".answers button")[2].innerText = "the altering genetic materials of plants";
                 break;
             default:
                 break;
